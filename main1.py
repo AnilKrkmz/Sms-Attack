@@ -95,7 +95,7 @@ def banner():
 
 Choose the service you want to use
 
-
+\033[0m[1] \033[96mServices
 
 \033[92mType -help into the console to learn commands
 
@@ -116,4 +116,24 @@ banner()
 
 
 console1 = input("\033[91m \n\n[*]VerificationNum:\033[0m " )
+
+
+def helpage():
+
+    helpage_ = """
+
+
+
+    Commands
+
+    /attack "Phone Number" "ServiceNumber"
+
+
+
+    """
+
+    print(helpage_)
+
+if console1 == "/help":
+    hel_page()
 
