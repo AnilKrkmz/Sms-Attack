@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 def banner():
 
     clr()
@@ -19,6 +18,15 @@ def banner():
 
 
 
+Choose the service you want to use
+
+
+
+\033[0m[1] \033[96mhttps://sms-online.co/receive-free-sms/
+
+
+
+\033[92mType -help into the console to learn commands
 
                                          """
 
@@ -29,6 +37,3 @@ def banner():
 
 
 banner()
-=======
-print("Merhaba");
->>>>>>> 46025fd28960873045b0405f7746ff3398c96381
