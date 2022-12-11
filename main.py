@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 def banner():
 
     clr()
@@ -28,3 +29,6 @@ def banner():
 
 
 banner()
+=======
+print("Merhaba");
+>>>>>>> 46025fd28960873045b0405f7746ff3398c96381
