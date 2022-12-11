@@ -1,44 +1,21 @@
 #!/usr/bin/env python
+
 import threading
+
 import string
+
 import base64
+
 import urllib.request
+
 import urllib.parse
+
 import os
+
 import time
+
 import sys
-import random
 
-try:
-
-    import requests
-
-except ImportError:
-
-    os.system('pip2 install requests')
-
-try:
-
-    request = requests.get("https://www.google.com/search?q=tahmid+rayat", timeout=3)
-
-except (requests.ConnectionError, requests.Timeout) as exception:
-
-    print("[!] No internet connection [!]")
-
-    sys.exit()
-
-import requests
-
-from bs4 import BeautifulSoup **
-#!/usr/bin/env python
-import threading
-import string
-import base64
-import urllib.request
-import urllib.parse
-import os
-import time
-import sys
 import random
 
 try:
@@ -53,7 +30,7 @@ except ImportError:
 
 try:
 
-    request = requests.get("https://www.google.com/search?q=tahmid+rayat", timeout=3)
+    request = requests.get("https://www.google.com/search?q=sms+intcontrol", timeout=3)
 
 except (requests.ConnectionError, requests.Timeout) as exception:
 
@@ -64,7 +41,6 @@ except (requests.ConnectionError, requests.Timeout) as exception:
 import requests
 
 from bs4 import BeautifulSoup
-
 
 
 yellow='\033[93m'
@@ -82,6 +58,9 @@ b='\033[1m'
 W = '\033[0m'
 
 colors = ['\033[1;31m', '\033[1;32m', '\033[1;33m', '\033[1;34m', '\033[1;35m', '\033[1;36m']
+
+
+
 def clr():
 
     if os.name == 'nt':
@@ -93,17 +72,42 @@ def clr():
         os.system('clear')
 
 
-def helpage():
+def banner():
 
-    helpage = """
+    clr()
 
-
-
-    Commands
-    Get Num
+    logo = """
 
 
 
-    """
+\033[96m\ \   / /    () / |()  __    | | ()      __  \033[92m| \ | | 
 
-    print(helpage)
+\033[96m \ \ / //  | '__  | | | / |/ _` ||  | /  \ | ' \ \033[92m|  |  | |  ' `  \
+
+
+
+\033[96m  \ V /|  __/| |   |     (__| (|  |_ |  ()  | | |\033[92m| |\   ||  | | | | |
+
+\033[96m   _/  ___|   ||  || __|_,| _| ___/ || ||\033[92m|| _| _,||| || |_|
+
+
+
+Choose the service you want to use
+
+
+
+\033[0m[1] \033[96mhttps://sms-online.co/receive-free-sms/
+
+
+
+\033[92mType -help into the console to learn commands
+
+                                         """
+
+    print(logo)
+
+    print("\n")
+
+
+
+banner()
