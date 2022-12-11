@@ -97,7 +97,7 @@ Choose the service you want to use
 
 \033[0m[1] \033[96mServices
 
-\033[92mType -help into the console to learn commands
+\033[92mType /help into the console to learn commands
 
                                          """
 
@@ -133,7 +133,9 @@ def helpage():
     """
 
     print(helpage_)
+    banner()
 
 if console1 == "/help":
-    hel_page()
+    helpage()
+
 
