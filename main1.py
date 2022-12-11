@@ -29,7 +29,7 @@ except ImportError:
 
 try:
 
-    request = requests.get("https://www.google.com/search?q=tahmid+rayat", timeout=3)
+    request = requests.get("https://github.com/AnilKrkmz/SmsAttach", timeout=3)
 
 except (requests.ConnectionError, requests.Timeout) as exception:
 
@@ -40,9 +40,6 @@ except (requests.ConnectionError, requests.Timeout) as exception:
 import requests
 
 from bs4 import BeautifulSoup
-
-
-
 
 yellow='\033[93m'
 
@@ -60,7 +57,41 @@ W = '\033[0m'
 
 colors = ['\033[1;31m', '\033[1;32m', '\033[1;33m', '\033[1;34m', '\033[1;35m', '\033[1;36m']
 
+def system():
 
+    console1 = input("\033[91m \n\n[*]I am here:\033[0m " )
+
+    def service_list():
+        console2 = input("\033[93m \n\n[1]Tinder\n[2]Not Avaiable\nService: \033[0m")
+        if console2 == "1":
+            console3 = input("\033[96m \n\nEnter the country code(Exp:+31): +\033[0m")
+            if console3 != "90":
+                print("Unfortunately but country number you have written is not avaiable at the moment.")
+                service_list()
+            else:
+                console4 = input("\033[96m \n\nEnter the target number without + : \033[0m")
+                #Sms bomba kodu
+        else:
+            print("\033[92mUnfortunately but service number you have written is not avaiable at the moment.\033[0m")
+            service_list()
+                                  
+
+
+    def helpage():
+
+        helpage_ = """
+Commands
+/attach : it will attach the number
+/help   : you can learn the commands with this command like now you are doing.      
+"""
+        print(helpage_)
+        system()
+        
+
+    if console1 == "/help":
+        helpage()
+    elif console1 == "/attach":
+        service_list()
 
 
 def clr():
@@ -81,21 +112,14 @@ def banner():
 
 
 
-\033[91m ________  _____ ______   ________               \033[93m  ________  _________  _________  ________  ________  ___  ___ 
-\033[91m |\   ____\|\   _ \  _   \|\   ____\             \033[93m |\   __  \|\___   ___|\___   ___|\   __  \|\   ____\|\  \|\  \   
-\033[91m   \_/  \___||_|   |_||_|  |_| \___|\_           \033[93m \ \  \|\  \|___ \  \_\|___ \  \_\ \  \|\  \ \  \___|\ \  \\\  \   
-\033[91m  \|____|\  \ \  \    \ \  \|____|\  \           \033[93m  \ \   __  \   \ \  \     \ \  \ \ \   __  \ \  \    \ \   __  \  
-\033[91m    ____\_\  \ \__\    \ \__\____\_\  \          \033[93m   \ \  \ \  \   \ \  \     \ \  \ \ \  \ \  \ \  \____\ \  \ \  \ 
-\033[91m   |\_________\|__|     \|__|\_________\         \033[93m    \ \__\ \__\   \ \__\     \ \__\ \ \__\ \__\ \_______\ \__\ \__\
-
-\033[91m   \|_________|             \|_________|         \033[93m     \|__|\|__|    \|__|      \|__|  \|__|\|__|\|_______|\|__|\|__|
-
-
-
-
-Choose the service you want to use
-
-\033[0m[1] \033[96mServices
+\033[96m   ________  _____ ______   ________              \033[92m   ________  _________  _________  ________  ________  ___  ___ 
+\033[96m  |\   ____\|\   _ \  _   \|\   ____\             \033[92m  |\   __  \|\___   ___|\___   ___|\   __  \|\   ____\|\  \|\  \   
+\033[96m    \_/  \___||_|   |_||_|  |_| \___|\_           \033[92m  \ \  \|\  \|___ \  \_\|___ \  \_\ \  \|\  \ \  \___|\ \  \\\  \   
+\033[96m   \|____|\  \ \  \    \ \  \|____|\  \           \033[92m   \ \   __  \   \ \  \     \ \  \ \ \   __  \ \  \    \ \   __  \  
+\033[96m     ____\_\  \ \__\    \ \__\____\_\  \          \033[92m    \ \  \ \  \   \ \  \     \ \  \ \ \  \ \  \ \  \____\ \  \ \  \ 
+\033[96m    |\_________\|__|     \|__|\_________\         \033[92m     \ \__\ \__\   \ \__\     \ \__\ \ \__\ \__\ \_______\ \__\ \__\
+    
+\033[96m   \|_________|             \|_________|         \033[92m      \|__|\|__|    \|__|      \|__|  \|__|\|__|\|_______|\|__|\|__|
 
 \033[92mType /help into the console to learn commands
 
@@ -106,37 +130,6 @@ Choose the service you want to use
     print("\n")
 
 
-
 banner()
-
-
-
-
-
-
-
-console1 = input("\033[91m \n\n[*]VerificationNum:\033[0m " )
-
-
-
-def helpage():
-
-    helpage_ = """
-
-
-
-    Commands
-
-    
-
-
-
-    """
-
-    print(helpage_)
-    banner()
-
-if console1 == "/help":
-    helpage()
-
+system()
 
