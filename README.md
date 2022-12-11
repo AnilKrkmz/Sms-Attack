@@ -7,4 +7,4 @@ Ege Kurnaz & Nuri Anıl Korkmaz
 
 Kurulum
 
-<Code> git clone https://github.com/AnilKrkmz/Sms-Attach.git 
+<Code> git clone https://github.com/AnilKrkmz/Sms-Attach.git <Code>

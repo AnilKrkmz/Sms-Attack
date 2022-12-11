@@ -117,3 +117,6 @@ banner()
 
 console1 = input("\033[91m \n\n[*]Atak yapilacak numara: \033[0m " )
 
+if console1 == "/help":
+    helpage()
+

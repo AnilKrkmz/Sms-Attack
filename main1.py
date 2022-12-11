@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+#libraries
 import threading
 
 import string
@@ -17,6 +17,7 @@ import time
 import sys
 
 import random
+
 
 try:
 
@@ -40,7 +41,7 @@ except (requests.ConnectionError, requests.Timeout) as exception:
 import requests
 
 from bs4 import BeautifulSoup
-
+#color settings
 yellow='\033[93m'
 
 gren='\033[92m'
@@ -59,7 +60,7 @@ colors = ['\033[1;31m', '\033[1;32m', '\033[1;33m', '\033[1;34m', '\033[1;35m', 
 
 def system():
 
-    console1 = input("\033[91m \n\n[*]I am here:\033[0m " )
+    console1 = input("\033[91m \n\n[*]Sms Attack: \033[0m " )
 
     def service_list():
         console2 = input("\033[93m \n\n[1]Tinder\n[2]Not Avaiable\nService: \033[0m")
@@ -70,7 +71,7 @@ def system():
                 service_list()
             else:
                 console4 = input("\033[96m \n\nEnter the target number without + : \033[0m")
-                #Sms bomba kodu
+                #Sms bomb kodu
         else:
             print("\033[92mUnfortunately but service number you have written is not avaiable at the moment.\033[0m")
             service_list()
@@ -81,7 +82,7 @@ def system():
 
         helpage_ = """
 Commands
-/attach : it will attach the number
+/attack : it will attack the number.
 /help   : you can learn the commands with this command like now you are doing.      
 """
         print(helpage_)
@@ -90,7 +91,7 @@ Commands
 
     if console1 == "/help":
         helpage()
-    elif console1 == "/attach":
+    elif console1 == "/attack":
         service_list()
 
 
