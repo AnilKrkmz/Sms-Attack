@@ -63,7 +63,7 @@ def system():
     console1 = input("\033[91m \n\n[*]Sms Attack: \033[0m " )
 
     def service_list():
-        console2 = input("\033[93m \n\n[1]Tinder\n[2]Not Avaiable\nService: \033[0m")
+        console2 = input("\033[93m \n\n[1]Tinder\n[2]Not Avaiable\033[95m\n\nChoose Service: ")
         if console2 == "1":
             console3 = input("\033[96m \n\nEnter the country code(Exp:+31): +\033[0m")
             if console3 != "90":
