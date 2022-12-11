@@ -29,11 +29,11 @@ except ImportError:
 
 try:
 
-    request = requests.get("https://www.google.com/search?q=tahmid+rayat", timeout=3)
+    request = requests.get("https://github.com/AnilKrkmz/SmsAttach", timeout=3)
 
 except (requests.ConnectionError, requests.Timeout) as exception:
 
-    print("[!] No internet connection [!]")
+    print("[!] Internet Baglantı Sorunu [!]")
 
     sys.exit()
 
@@ -80,15 +80,18 @@ def banner():
     logo = """
 
 
+\033[96m|\   ____\|\   _ \  _   \|\   ____\      \033[92m |\   __  \|\___   ___\\___   ___\\   __  \|\   ____\|\  \|\  \    
+\033[96m\ \  \___|\ \  \\\__\ \  \ \  \___|_     \033[92m \ \  \|\  \|___ \  \_\|___ \  \_\ \  \|\  \ \  \___|\ \  \\\  \   
+\033[96m \ \_____  \ \  \\|__| \  \ \_____  \    \033[92m  \ \   __  \   \ \  \     \ \  \ \ \   __  \ \  \    \ \   __  \  
+\033[96m  \|____|\  \ \  \    \ \  \|____|\  \   \033[92m   \ \  \ \  \   \ \  \     \ \  \ \ \  \ \  \ \  \____\ \  \ \  \ 
+\033[96m   ____\_\  \ \__\    \ \__\____\_\  \   \033[92m    \ \__\ \__\   \ \__\     \ \__\ \ \__\ \__\ \_______\ \__\ \__\
+\033[96m   |\_________\|__|     \|__|\_________\ \033[92m     \|__|\|__|    \|__|      \|__|  \|__|\|__|\|_______|\|__|\|__|
+                                                                
+                                                   
 
-\033[96m\ \   / /___  _ __ (_) / _|(_)  ___  __ _ | |_ (_)  ___   _ __  \033[92m| \ | | _
-\033[96m \ \ / // _ \| '__|| || |_ | | / __|/ _` || __|| | / _ \ | '_ \ \033[92m|  \| || | | || '_ ` _ \
-\033[96m  \ V /|  __/| |   | ||  _|| || (__| (_| || |_ | || (_) || | | |\033[92m| |\  || |_| || | | | | |
-\033[96m   \_/  \___||_|   |_||_|  |_| \___|\__,_| \__||_| \___/ |_| |_|\033[92m|_| \_| \__,_||_| |_| |_|
 
 
-
-Choose the service you want to use
+Kullanmak Istediginiz Servisi Secin
 
 
 
@@ -96,7 +99,7 @@ Choose the service you want to use
 
 
 
-\033[92mType -help into the console to learn commands
+\033[92mType -help komutları ogrenmek icin 
 
                                          """
 
@@ -112,7 +115,5 @@ banner()
 
 
 
-
-
-console1 = input("\033[91m \n\n[*]VerificationNum:\033[0m " )
+console1 = input("\033[91m \n\n[*]Atak yapilacak numara: \033[0m " )
 
