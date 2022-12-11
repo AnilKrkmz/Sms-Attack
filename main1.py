@@ -83,7 +83,9 @@ def system():
         helpage_ = """
 Commands
 /attack : it will attack the number.
-/help   : you can learn the commands with this command like now you are doing.      
+/help   : you can learn the commands with this command like now you are doing. 
+/clear  : clear everything on console without banner.
+
 """
         print(helpage_)
         system()
@@ -93,6 +95,13 @@ Commands
         helpage()
     elif console1 == "/attack":
         service_list()
+    elif console1 =="/clear":
+        clr()
+        banner()
+        system()
+    else:
+        print("Unfortunately there is no such command Type /help for learn the commands.")
+        system()
 
 
 def clr():
