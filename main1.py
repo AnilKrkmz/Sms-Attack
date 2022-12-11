@@ -63,15 +63,35 @@ def system():
     console1 = input("\033[91m \n\n[*]Sms Attack: \033[0m " )
 
     def service_list():
-        console2 = input("\033[93m \n\n[1]Tinder\n[2]Not Avaiable\033[95m\n\nChoose Service: ")
+        console2 = input("\033[93m \n\n[1]Tinder\n[2]Not Avaiable\033[95m\n\nChoose Service: \033[0m")
         if console2 == "1":
             console3 = input("\033[96m \n\nEnter the country code(Exp:+31): +\033[0m")
-            if console3 != "90":
+            if console3 == "90":
+                console4 = input("\033[96m \n\nEnter the target number without + : \033[0m")               
+                if console4 == "/clear":
+                    clr()
+                    banner()
+                    system()
+                elif console4 =="/exit":
+                    return 0
+            elif console3 == "/clear":
+                clr()
+                banner()
+                system()
+            elif console3 =="/exit":
+                return 0
+            else:
                 print("Unfortunately but country number you have written is not avaiable at the moment.")
                 service_list()
-            else:
-                console4 = input("\033[96m \n\nEnter the target number without + : \033[0m")
-                #Sms bomb kodu
+
+        elif console2 == "/clear":
+            clr()
+            banner()
+            system()
+        elif console2 =="/exit":
+            return 0
+
+                
         else:
             print("\033[92mUnfortunately but service number you have written is not avaiable at the moment.\033[0m")
             service_list()
@@ -84,7 +104,8 @@ def system():
 Commands
 /attack : it will attack the number.
 /help   : you can learn the commands with this command like now you are doing. 
-/clear  : clear everything on console without banner.
+/clear  : restart the code and clear everything on console without banner.
+/exit   : you can use this command for exit the code.
 
 """
         print(helpage_)
@@ -99,6 +120,8 @@ Commands
         clr()
         banner()
         system()
+    elif console1 =="/exit":
+        return 0
     else:
         print("Unfortunately there is no such command Type /help for learn the commands.")
         system()
