@@ -75,9 +75,17 @@ def system():
     def service_list():
         console2 = input("\033[93m \n\n[1]Tinder\033[95m\n\nChoose Service: \033[0m")
         if console2 == "1":
-            console3 = input("\033[96m \n\nEnter the country code(Exp:+31): +\033[0m")
-            if console3 == "90":
-                console4 = input("\033[96m \n\nEnter the target number without + : \033[0m")               
+            console3 = input("\033[96m \n\nEnter the country code(Exp:+31): \033[0m")
+            if console3 == "+90":
+                console4 = input("\033[96m \n\nEnter the target number without + : \033[0m")
+                url = "https://api.gotinder.com/v2/auth/sms/send"
+                payload = {
+    "auth_type": "sms",
+    "locale": "tr",
+    "phone_number": "{}{}".format(console3,console4)
+}
+                response = requests.request("POST", url, data = payload)
+                print(response.text.encode('utf8'))               
                 if console4 == "/clear":
                     clear()
                 elif console4 =="/exit":
