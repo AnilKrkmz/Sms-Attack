@@ -40,6 +40,8 @@ def clear():
     system()
 
 def exitt():
+    clr()
+    print("Thanks for your time...")
     return 0
 
 def docs():
